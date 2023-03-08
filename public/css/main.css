@@ -1,0 +1,36 @@
+
+body{
+    background-color: #fff;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: center;
+    height: 48px;
+    
+    
+}
+
+.nav a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    transform: 300ms;
+}
+.nav a:hover{
+    color: rgb(36, 182, 80);
+    
+}
+
+
+footer{
+    text-align: center;
+    background-color: skyblue;
+}
