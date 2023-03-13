@@ -1,0 +1,41 @@
+<%- include('./templates/header') %>
+
+
+    <%- include('./templates/nav') %>
+
+        <h1>
+            <%= msg %>
+        </h1>
+
+
+    
+        <table>
+
+            <tr>
+                <th>Instalacion</th>
+                <th>Descripcion</th>
+                <th>Aforo</th>
+            </tr>
+
+            
+
+            <% instalaciones.forEach(item => { %>
+
+                <tr>
+                <td>
+                    <%=item.nombre %>
+                </td>
+                <td>
+                    <%=item.descripcion %>
+                </td>
+                <td>
+                    <%=item.aforo %>
+                </td>
+             
+            </tr>
+
+
+                <% }) %>
+        </table>
+
+        <%- include('./templates/footer') %>

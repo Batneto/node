@@ -1,17 +1,26 @@
-
-body{
-    background-color: #fff;
-    
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+
+
+@media screen and (max-width: 640px) {
+ 
 h1{
     text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+h2{
+    color: blue;
 }
 
 .nav{
     display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: lime;
     justify-content: center;
     height: 48px;
     
@@ -33,4 +42,189 @@ h1{
 footer{
     text-align: center;
     background-color: skyblue;
+    margin-top: 60px;
 }
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+    text-align: center;
+    background-color: rgb(73, 47, 223);
+    
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+    font-size: 18px;
+    
+  }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  
+h1{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+h2{
+  color: blue;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: center;
+  height: 48px;
+  
+  
+}
+
+.nav a{
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  transform: 300ms;
+}
+.nav a:hover{
+  color: rgb(36, 182, 80);
+  
+}
+
+
+footer{
+  text-align: center;
+  background-color: skyblue;
+  margin-top: 60px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+  text-align: center;
+  background-color: chartreuse;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+  font-size: 18px;
+  
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+ 
+h1{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+h2{
+  color: blue;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: center;
+  height: 48px;
+  max-width: 1400px;
+  
+  
+}
+
+.nav a{
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  transform: 300ms;
+}
+.nav a:hover{
+  color: rgb(36, 182, 80);
+  
+}
+
+
+footer{
+  text-align: center;
+  background-color: skyblue;
+  margin-top: 60px;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+  text-align: center;
+  background-color: chartreuse;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+  font-size: 18px;
+  
+}
+
+}
+
+

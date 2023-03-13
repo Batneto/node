@@ -1,0 +1,11 @@
+    <%- include('./templates/header') %>
+
+
+    <%- include('./templates/nav') %>
+
+    <% arrayLibros.forEach(item => { %>
+        <p> <%= item.titulo %> </p>
+    <% }) %>
+
+
+    <%- include('./templates/footer') %>
