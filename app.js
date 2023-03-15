@@ -35,8 +35,9 @@ conexion()
 //* RUTAS
 
 app.use('/',require('./router/routerFront'))
-app.use('/api',require('./router/routerApi'))
-app.use('/api',require('./router/routerUsuarios'))
+app.use('/api/servicios',require('./router/routerApi'))
+app.use('/api/usuarios',require('./router/routerUsuarios'))
+app.use('/admin',require('./router/routerAdmin'))
 
 
 app.use((req,res) => {

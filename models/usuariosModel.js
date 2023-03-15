@@ -2,6 +2,7 @@ const{Schema,model}=require('mongoose')
 
 
 const UsuariosSchema=new Schema({
+    
     nombre:{
         type:String,
         require:true
@@ -12,7 +13,9 @@ const UsuariosSchema=new Schema({
     },
     mail:{
         type:String,
-        require:true
+        require:true,
+        unique:true
+        
     }
 })
 
