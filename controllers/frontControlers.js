@@ -62,8 +62,17 @@ const mostrarFormularioAdmin=async(req,res)=>{
 
 const comprobarLogin=async(req,res)=>{
     try {
-        consulta("/usuarios",'POST',req.body)
-        res.redirect('/admin/administrarServicios')
+           const respuesta= await consulta("/usuarios/",'post',req.body)
+
+           const data= await respuesta.json()
+           console.log(data);
+        if (data.ok==false) {
+            res.redirect('/login')
+        }else{
+            res.redirect('/admin/administrarServicios')
+        }
+
+        
     } catch (error) {
         
     }
