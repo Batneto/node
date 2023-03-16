@@ -1,0 +1,22 @@
+<%- include('./templates/header')  %>    
+
+<%- include('./templates/nav')  %>  
+
+<h1>Estos son nuestros servicios</h1>
+
+<a class="button" href="http://localhost:3000/admin/servicio/nuevo">Crear Nuevo usuario</a>
+
+<% servicios.forEach(element => { %>
+    <div class="card">
+        <div class="container">
+            <p> <%= element.servicio %></p>
+            <a class="button" href=<%=`http://localhost:3000/admin/servicio/actualizar/${element._id}`%> >Actualizar</a>
+            <a class="button" href="<%=`http://localhost:3000/admin/servicio/eliminando/${element._id}`%>">Eliminar</a>
+        </div>
+    </div>
+<% }) %>
+
+
+<%- include('./templates/footer')  %>  
+
+

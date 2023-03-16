@@ -1,6 +1,7 @@
 
 const Servicio = require("../models/servicioModel")
 const Instalaciones=require("../models/instalacionesModel")
+const {consulta}=require("../helpers/fetch")
 
 
 
@@ -12,23 +13,24 @@ const getIndex = (req, res) => {
     });
 }
 
-const getServicios =async (req, res) => {
-
-    try {
-        const servicios=await Servicio.find()
-        console.log(servicios); 
-        res.render('servicios', {
-            titulo: "servicio",
-            msg: "este es el mensaje",
-            servicios:servicios
-        })
-
-    } catch (error) {
-        console.log("esta mal");
+const getServicios= async (req, res) => {
+    
+    const respuesta = await consulta('/servicios', 'get', req.body);
+    
+    const {data, ok}= await respuesta.json()
+    
+    //console.log(servicios)
+    res.render("servicios", {
+               titulo: "Servicios",
+                msg: "este es el mensaje de servicios actualizado",
+    
+                servicios:data,
+             })
+    
+    
+        
+        
     }
-   
-        ;
-}
 
 const getContacto = (req, res) => {
     res.render('contacto');
@@ -54,16 +56,20 @@ const getInstalaciones=async(req,res)=>{
         ;
 }
 
-// const getProductos=async(req,res)=>{
-//     try {
+const mostrarFormularioAdmin=async(req,res)=>{
+    res.render('fomularioAdmin');
+}
 
-//         res.render('productos')
+const comprobarLogin=async(req,res)=>{
+    try {
+        consulta("/usuarios",'POST',req.body)
+        res.redirect('/admin/administrarServicios')
+    } catch (error) {
+        
+    }
+    
+}
 
-//     } catch (error) {
-//         console.log("esta mal");
-//     }
-//         ;
-// }
 
 
 
@@ -75,5 +81,7 @@ module.exports = {
     getContacto,
     getSomos,
     getInstalaciones,
+    mostrarFormularioAdmin,
+    comprobarLogin
    
 }

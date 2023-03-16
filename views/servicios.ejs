@@ -1,6 +1,4 @@
 
-
-
 <%- include('./templates/header')  %>  
 
 
@@ -10,6 +8,12 @@
 <main>
     <h1>Servicios</h1>
 </main>
+
+<section>
+    <% servicios.forEach(element => { %>
+        <p> <%= element.servicio %></p>
+    <% }) %>
+</section>
 
 
 <%- include('./templates/footer')  %>  
