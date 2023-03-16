@@ -65,7 +65,7 @@ const comprobarLogin=async(req,res)=>{
            const respuesta= await consulta("/usuarios/",'post',req.body)
 
            const data= await respuesta.json()
-           console.log(data);
+          
         if (data.ok==false) {
             res.redirect('/login')
         }else{

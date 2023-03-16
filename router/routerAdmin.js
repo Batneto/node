@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router();
+const {validarAdmin}=require('../middleware/validarAdmin')
 const{mostrarNuevoServicio,crearNuevoServicio,mostrarTodos,actualizarServicio,actualizando,eliminando}=require('../controllers/adminControllers')
 
 
+//router.use(validarAdmin)
 
 //todo Mostrar servicios y modificaciones
 
